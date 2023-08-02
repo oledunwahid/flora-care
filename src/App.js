@@ -1,16 +1,12 @@
-import { Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar";
-// import Footer from "./components/Footer";
+import LandingPage from "./pages/LandingPage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<LandingPage/>}/>
-        </Routes>
-
+       <NavBar/>
+       <LandingPage/>
     </div>
   );
 }
