@@ -44,7 +44,7 @@ const Navbar = () => {
             <hr className="border-gray-300"/>
 
             {/* Search Bar */}
-            <div className={`items-center bg-white md:px-3 lg:px-10 ${search ? 'lg:block fixed w-full' : 'hidden'}`}>
+            <div className={`items-center bg-white md:px-3 lg:px-10 ${search ? 'lg:block fixed w-full hidden' : 'hidden'}`}>
                 <form>               
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 text-xl">
                         <ion-icon name="search"></ion-icon>
