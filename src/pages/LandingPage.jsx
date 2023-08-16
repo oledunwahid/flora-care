@@ -19,13 +19,80 @@ function LandingPage() {
       icon: "📍",
       title: "Faveur Florist Jakarta",
       location: "Kota Jakarta Timur",
-      description:"Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
       rating: 4.5,
-      },
-    { id: 2, image: Image2, title: "Elegant Tulip", price: 99900 },
-    { id: 3, image: Image3, title: "Hibiscus Bloom", price: 199900 },
-    { id: 4, image: Image4, title: "Purple Delight", price: 299900 },
-    { id: 5, image: Image5, title: "Radiant Red", price: 59900 },
+    },
+    {
+      id: 2,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 3,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 4,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 5,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 6,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 7,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
+    {
+      id: 8,
+      image: Image1,
+      icon: "📍",
+      title: "Faveur Florist Jakarta",
+      location: "Kota Jakarta Timur",
+      description:
+        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+      rating: 4.5,
+    },
   ];
 
   const collections = [
@@ -106,7 +173,7 @@ function LandingPage() {
         </div>
       </section>
 
-      <div className="flex flex-col lg:flex-row justify-center lg:gap-y-8 lg:gap-x-56 h-full">
+      <div className="container flex flex-col lg:flex-row justify-center lg:gap-y-8 lg:gap-x-56 h-full">
         {/* Flower Market */}
         <section className="py-16 px-36 bg-pink-100">
           <div className="container mx-auto">
@@ -159,7 +226,6 @@ function LandingPage() {
                       <div className="flex items-center">
                         <span className="text-yellow-500 mr-1">&#9733;</span>
                         <span className="text-white">{flower.rating}</span>{" "}
-                       
                       </div>
                     </div>
                   </div>
@@ -167,7 +233,7 @@ function LandingPage() {
                     {flower.title}
                   </h3>
                   <p className="font-semibold text-gray-800 transition-colors">
-                    {flower.location}                        {flower.icon}
+                    {flower.location} {flower.icon}
                   </p>
                   <p className="text-gray-600 text-[11px]">
                     {flower.description}
@@ -182,7 +248,7 @@ function LandingPage() {
         </section>
       </div>
 
-      {/* Featured Collections */}
+      {/* Featured Collections */}           
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-8 uppercase text-gray-800">
@@ -192,13 +258,13 @@ function LandingPage() {
             {collections.map((collection) => (
               <div
                 key={collection.id}
-                className="bg-white rounded-lg shadow-md p-0 flex flex-col justify-center items-center mt-2 overflow-hidden"
+                className="bg-white rounded-lg shadow-md p-0 flex flex-col justify-center items-center mt-2 overflow-hidden relative transform transition-transform duration-300 hover:scale-105"
                 style={{ margin: 0 }} // Remove margin
               >
                 <img
                   src={collection.image}
                   alt={collection.title}
-                  className="w-full h-48 object-cover mb-0 rounded-lg "
+                  className="w-full h-48 object-cover mb-0 rounded-lg"
                   style={{ margin: 0, objectFit: "cover" }} // Add objectFit property
                 />
                 <h3 className="text-lg font-semibold mb-2 py-2 text-pink-600">
