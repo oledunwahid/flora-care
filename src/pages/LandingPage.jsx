@@ -1,15 +1,20 @@
 import React from "react";
-import Image1 from "../assets/Faveur.png";
-import Image2 from "../assets/three pink flowers.png";
-import Image3 from "../assets/big pink hibiscus flower.png";
-import Image4 from "../assets/purpleflower.png";
-import Image5 from "../assets/red_blooming_flower.png";
+import Image1 from "../assets/flowershop1.jpg";
+import Image2 from "../assets/flowershop2.jpg";
+import Image3 from "../assets/flowershop3.jpg";
+import Image4 from "../assets/flowershop4.jpg";
+import Image5 from "../assets/flowershop5.png";
+import Image6 from "../assets/flowershop6.jpg";
+import Image7 from "../assets/flowershop7.jpg";
+import Image8 from "../assets/flowershop8.jpg";
 import WeddingImage from "../assets/wedding.jpg";
 import ValentineImage from "../assets/Valentine Catagories.jpg";
 import GraduationImage from "../assets/florist-graduation.jpg";
 import FlowerMarketImage from "../assets/ceritanya-gedungfloracare.jpg";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Carousel from "../components/carousel/Carousel";
 
 function LandingPage() {
   const flowers = [
@@ -17,81 +22,89 @@ function LandingPage() {
       id: 1,
       image: Image1,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Three Bouquets",
+      location: "Kota Jakarta Barat",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Jl. Raya Kebayoran Lama No.80, RT.5/RW.1, Sukabumi Utara, Kec. Kb. Jeruk, Jakarta, Daerah Khusus Ibukota Jakarta 11540",
+      rating: 4.6,
+      link: "https://threebouquets.com/",
     },
     {
       id: 2,
-      image: Image1,
+      image: Image2,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Orchid Florist",
+      location: "Kota Jakarta Barat",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Jl. Tanjung Duren Utara V No.228, Daerah Khusus Ibukota Jakarta 11470",
+      rating: 4.7,
+      link: "http://www.orchid-florist.com/",
     },
     {
       id: 3,
-      image: Image1,
+      image: Image3,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Flower advisor",
+      location: "Kota Jakarta Barat",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Jl. Arjuna Utara No.9c, RT.8/RW.1, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510",
+      rating: 4.8,
+      link: "https://www.floweradvisor.co.id/",
     },
     {
       id: 4,
-      image: Image1,
+      image: Image4,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Pinus Florist",
+      location: "Kota Surabaya",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Jl. Kayoon No.33, Embong Kaliasin, Kec. Genteng, Surabaya, Jawa Timur 60271",
+      rating: 4.8,
+      link: "https://pinus.florist/",
     },
     {
       id: 5,
-      image: Image1,
+      image: Image5,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Outer Blooms",
+      location: "Kota Jakarta Selatan",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+        "ITC Kuningan - Lantai 9, Jl. Prof. DR. Satrio, RT.11/RW.4, Karet Kuningan, Daerah Khusus Ibukota Jakarta 12940",
       rating: 4.5,
+      link: "https://outerbloom.com/",
     },
     {
       id: 6,
-      image: Image1,
+      image: Image6,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Prestisa",
+      location: "Kota Bekasi",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Ruko pasar sinpasa summarecon bekasi No B-32, RT.003/RW.005, Marga Mulya, Kec. Bekasi Utara, Kota Bekasi, Jawa Barat 17142",
+      rating: 4.8,
+      link: "https://prestisa.com/",
     },
     {
       id: 7,
-      image: Image1,
+      image: Image7,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Olusta",
+      location: "Kota Jakarta Selatan",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Jl. Swadaya 1 Gg. Sail No.54, RT.13/RW.10, Pejaten Timur, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510",
+      rating: 4.9,
+      link: "https://olusta.com/",
     },
     {
       id: 8,
-      image: Image1,
+      image: Image8,
       icon: "📍",
-      title: "Faveur Florist Jakarta",
-      location: "Kota Jakarta Timur",
+      title: "Flower Studio",
+      location: "Kota Jakarta Pusat",
       description:
-        "Perumahan billy and moon, Jl. Kelapa Sawit II No.5, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
-      rating: 4.5,
+        "Mid Plaza 1 Lt.BS, Jl. Jenderal Sudirman, RT.10/RW.11, Karet Tengsin, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10220",
+      rating: 4.8,
+      link: "https://flowerstudio.co.id/",
     },
   ];
 
@@ -99,7 +112,7 @@ function LandingPage() {
     {
       id: "wedding",
       image: WeddingImage,
-      title: "Wedding Flowers",
+      title: "Bunga Papan",
       description: "Elegant floral arrangements for your special day.",
     },
     {
@@ -132,7 +145,7 @@ function LandingPage() {
     },
     {
       id: 3,
-      icon: "🌷",
+      icon: "🛵",
       title: "Same-Day Delivery",
       description: "Enjoy fast and reliable same-day flower delivery services.",
     },
@@ -162,54 +175,50 @@ function LandingPage() {
 
   return (
     <>
-      <section className="h-[700px] flex items-center overflow-x-hidden bg-gradient-to-tr from-stone-300 via-red-300 to-white">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row justify-center lg:gap-y-8 lg:gap-x-56 h-full">
-            {/* welcome text */}
-            <h1 className="text-7xl lg:text-8xl text-white drop-shadow-md shadow-black-600/50">
-              Welcome <span /> to floracare
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <div className="container flex flex-col lg:flex-row justify-center lg:gap-y-8 lg:gap-x-56 h-full">
+      <Carousel></Carousel>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,128L48,117.3C96,107,192,85,288,80C384,75,480,85,576,112C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+      </svg>
+      
+      <div className="flex flex-col lg:flex-row justify-center lg:gap-y-8 lg:gap-x-56 h-full">
         {/* Flower Market */}
-        <section className="py-16 px-36 bg-pink-100">
+        <section className="py-16 md:px-36 px-10 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-2/3 md:mr-8">
                 <img
                   src={FlowerMarketImage}
                   alt="Flower Market"
-                  className="w-full lg:w-full lg:h-[570px] rounded-lg shadow-md"
+                  className="w-full lg:w-full sm:h-full lg:h-[570px] rounded-lg shadow-md"
                 />
               </div>
               <div className="md:w-1/3 lg:py-0 py-6">
-                <h2 className="text-3xl font-semibold mb-6 uppercase text-pink-600">
+                <h2 className="text-3xl font-semibold mb-6 uppercase text-[#fa7676]">
                   Introducing <span />
                   Floracare
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-grey mb-6 lg:text-base md:text-sm">
                   Explore a variety of beautiful flowers in our marketplace.
                   From vibrant roses to elegant tulips, you'll find the perfect
                   blooms for any occasion.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-grey mb-6 lg:text-base md:text-sm">
                   "Express Emotions with Elegance:
                   <br />
                   Your Blooms, Your Way, Anywhere in Jakarta!"
                 </p>
-                <button className="bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600">
-                  Learn More
-                </button>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+            <div className="grid gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-12">
               {flowers.map((flower) => (
                 <div
                   key={flower.id}
-                  className="bg-white rounded-lg shadow-md p-4 overflow-hidden relative"
+                  className="bg-white rounded-lg shadow-lg p-4 overflow-hidden relative"
                 >
                   <div className="relative">
                     <img
@@ -229,18 +238,20 @@ function LandingPage() {
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-lg text-pink-600 font-semibold mb-2">
+                  <h3 className="text-lg text-[#fa7676] font-semibold mb-2">
                     {flower.title}
                   </h3>
                   <p className="font-semibold text-gray-800 transition-colors">
                     {flower.location} {flower.icon}
                   </p>
-                  <p className="text-gray-600 text-[11px]">
+                  <p className="text-grey text-[11px]">
                     {flower.description}
                   </p>
-                  <button className="mt-4 bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600">
-                    Order Now
-                  </button>
+                  <Link to={`${flower.link}`} >
+                    <button className="mt-4 bg-[#FCA7A7] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#fa7676]">
+                      Order Now
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -249,12 +260,19 @@ function LandingPage() {
       </div>
 
       {/* Featured Collections */}           
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto">
+      <section className="bg-[#FFD6D6]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+            <path
+              fill="#fff"
+              fill-opacity="1"
+              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+            ></path>
+        </svg>
+        <div className="container mx-auto py-16">
           <h2 className="text-3xl font-semibold text-center mb-8 uppercase text-gray-800">
             Featured Collections
           </h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 p-4">
+          <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3 p-10 md:p-4">
             {collections.map((collection) => (
               <div
                 key={collection.id}
@@ -267,33 +285,40 @@ function LandingPage() {
                   className="w-full h-48 object-cover mb-0 rounded-lg"
                   style={{ margin: 0, objectFit: "cover" }} // Add objectFit property
                 />
-                <h3 className="text-lg font-semibold mb-2 py-2 text-pink-600">
+                <h3 className="text-lg font-semibold mb-2 py-2 text-[#fa7676]">
                   {collection.title}
                 </h3>
-                <h4 className="text-base text-gray-600 font-medium mb-2">
+                <h4 className="text-base text-grey font-medium mb-2">
                   {collection.description}
                 </h4>
               </div>
             ))}
           </div>
         </div>
-      </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L48,117.3C96,107,192,85,288,80C384,75,480,85,576,112C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        </svg>
+      </section>      
 
       {/* Services or Products Overview */}
-      <section className="py-16 bg-pink-100 p-6">
+      <section className="bg-white py-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-8 uppercase text-gray-800">
             Services or Products Overview
           </h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 py-4 mx-6">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center"
+                className="bg-white rounded-lg p-4 flex flex-col items-center sm:text-sm "
               >
                 <span className="text-2xl mb-2">{service.icon}</span>
-                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-center">
+                <h3 className=" text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-grey text-center">
                   {service.description}
                 </p>
               </div>
@@ -303,19 +328,26 @@ function LandingPage() {
       </section>
 
       {/* FAQs with Accordion */}
-      <section className="py-4 bg-gray-100 p-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-8 uppercase text-gray-800">
+      <section className="bg-[#FFD6D6]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#fff"
+              fill-opacity="1"
+              d="M0,224L48,213.3C96,203,192,181,288,154.7C384,128,480,96,576,117.3C672,139,768,213,864,208C960,203,1056,117,1152,101.3C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+        </svg>
+        <div className="container mx-auto px-20 pb-20 pt-0 sm:pt-5">
+          <h2 className="text-3xl font-extrabold text-center mb-8 uppercase text-neutral">
             Frequently Asked Questions
           </h2>
           <div className="grid gap-4">
             {faqs.map((faq) => (
               <div
                 key={faq.id}
-                className=" rounded-lg shadow-md p-4 bg-pink-200"
+                className=" rounded-lg shadow-md p-4 bg-white"
               >
                 <button
-                  className="flex items-center w-full text-left text-lg font-semibold mb-2 focus:outline-none"
+                  className="flex items-center w-full text-left text-lg font-semibold mb-2 focus:outline-none text-neutral"
                   onClick={() =>
                     setActiveFaq(faq.id === activeFaq ? null : faq.id)
                   }
@@ -341,7 +373,7 @@ function LandingPage() {
                   </svg>
                 </button>
                 {faq.id === activeFaq && (
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gr">{faq.answer}</p>
                 )}
               </div>
             ))}

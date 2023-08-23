@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const NavLinks = () => {
     const links = [
-        {name: 'Home'},
-        {name: 'Flowers'},
-        {name: 'About Us'},
-        {name: 'Contact'},
+        {name: 'Shop'},
+        {name: 'Featured'},
+        {name: 'Service'},
+        {name: 'FAQ'},
     ];
     return (
         <>

@@ -6,7 +6,7 @@ import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#FFD6D6]">
        <NavBar/>
        <LandingPage/>
        <Footer/>
