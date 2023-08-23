@@ -1,12 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const NavLinks = () => {
     const links = [
-        {name: 'Shop'},
-        {name: 'Featured'},
-        {name: 'Service'},
-        {name: 'FAQ'},
+        {
+            id: '#Shop',
+            name: 'Shop',
+        },
+        {
+            id: '#Featured',
+            name: 'Featured',
+        },
+        {   id: '#Service',
+            name: 'Service'
+        },
+        {
+            id: '#FAQ',
+            name: 'FAQ'
+        },
     ];
     return (
         <>
@@ -14,7 +25,9 @@ const NavLinks = () => {
             links.map(link => (
                 <div>
                     <div className="px-3 text-left md:cursor-pointer">
-                        <Link to={`/${link.name}`}><h1 className="py-7">{link.name}</h1></Link>
+                        <Link activeClass="active" to={link.name} spy={true} smooth={true} offset={-80} duration={500} className="py-7">
+                            {link.name}
+                        </Link>
                     </div>
                 </div>
             ))

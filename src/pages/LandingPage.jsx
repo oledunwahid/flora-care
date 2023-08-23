@@ -214,7 +214,7 @@ function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="grid gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+            <div id="Shop" className="grid gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-12">
               {flowers.map((flower) => (
                 <div
                   key={flower.id}
@@ -260,7 +260,7 @@ function LandingPage() {
       </div>
 
       {/* Featured Collections */}           
-      <section className="bg-[#FFD6D6]">
+      <section id="Featured" className="bg-[#FFD6D6]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
             <path
               fill="#fff"
@@ -305,7 +305,7 @@ function LandingPage() {
       </section>      
 
       {/* Services or Products Overview */}
-      <section className="bg-white py-4">
+      <section id="Service" className="bg-white py-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-8 uppercase text-gray-800">
             Services or Products Overview
@@ -328,7 +328,7 @@ function LandingPage() {
       </section>
 
       {/* FAQs with Accordion */}
-      <section className="bg-[#FFD6D6]">
+      <section id="FAQ" className="bg-[#FFD6D6]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#fff"
