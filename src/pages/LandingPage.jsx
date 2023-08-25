@@ -174,7 +174,7 @@ function LandingPage() {
 
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250" className="pt-3 md:pt-8 lg:pt-20">
           <path
             fill="#fff"
             fill-opacity="1"

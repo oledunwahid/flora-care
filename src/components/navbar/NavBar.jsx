@@ -94,14 +94,13 @@ const Navbar = () => {
                 </div>
             </ul>
 
-            <div className={`max-w-[1400px] lg:h-[100vh] w-full m-auto pt-16 pb-20 px-4`}>
+            <div className={`${open? 'hidden' : 'max-w-[1400px] lg:h-[100vh] w-full m-auto py-20 px-4'}`}>
                 <Carousel
                     showThumbs={false}
                     autoPlay
                     infiniteLoop
                     interval={2000}
-                    showStatus={false}
-                    className={`${open ? 'hidden' : 'p-1'}`}    
+                    showStatus={false}    
                 >
                 <div>
                     <img src={carouselImage1} alt="Flower 1" className='rounded-2xl' />
