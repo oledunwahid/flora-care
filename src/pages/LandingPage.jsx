@@ -14,7 +14,6 @@ import FlowerMarketImage from "../assets/ceritanya-gedungfloracare.jpg";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Carousel from "../components/carousel/Carousel";
 
 function LandingPage() {
   const flowers = [
@@ -175,8 +174,6 @@ function LandingPage() {
 
   return (
     <>
-      <Carousel></Carousel>
-      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
           <path
             fill="#fff"

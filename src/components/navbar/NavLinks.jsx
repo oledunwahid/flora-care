@@ -24,8 +24,8 @@ const NavLinks = () => {
         {
             links.map(link => (
                 <div>
-                    <div className="px-3 text-left md:cursor-pointer">
-                        <Link activeClass="active" to={link.name} spy={true} smooth={true} offset={-80} duration={500} className="py-7">
+                    <div className="px-3 py-7 text-left md:cursor-pointer">
+                        <Link activeClass="active" to={link.name} spy={true} smooth={true} offset={-80} duration={500}>
                             {link.name}
                         </Link>
                     </div>
